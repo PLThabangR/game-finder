@@ -4,6 +4,7 @@ import './App.css'
 //components 
 
 import ListGroup from './components/ListGroup';
+import Alert from './components/Alert';
 
 function App() {
   const heading="My Cities List Group"
@@ -15,10 +16,18 @@ function App() {
     'Johannesburg',
     'Paris'
   ]
+
+  const handleSelectItem =(item:string)=>{
+    console.log(item)
+  }
+  const text ="Hello world!"
   return (
     <>
      
-    <ListGroup items={items} heading={heading}/>
+    <ListGroup items={items} heading={heading} onSelectItem={handleSelectItem}/>
+    <Alert>
+      Hello world form child
+    </Alert>
     </>
   )
 }
