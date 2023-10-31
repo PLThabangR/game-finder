@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 interface Alert{
-    children:string
+    children:ReactNode
 }
 const Alert = ({children}:Alert) => {
   return (

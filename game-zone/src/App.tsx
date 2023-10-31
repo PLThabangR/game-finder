@@ -26,7 +26,7 @@ function App() {
      
     <ListGroup items={items} heading={heading} onSelectItem={handleSelectItem}/>
     <Alert>
-      Hello world form child
+      Hello world form child <span>Thabang from Span</span>
     </Alert>
     </>
   )
