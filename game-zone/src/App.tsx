@@ -6,12 +6,19 @@ import './App.css'
 import ListGroup from './components/ListGroup';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const heading="My Cities List Group"
+  const items =[
+    'New york',
+    'San francisco',
+    'Tokyo',
+    'London',
+    'Johannesburg',
+    'Paris'
+  ]
   return (
     <>
      
-    <ListGroup/>
+    <ListGroup items={items} heading={heading}/>
     </>
   )
 }
