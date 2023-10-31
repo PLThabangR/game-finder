@@ -5,6 +5,7 @@ import './App.css'
 
 import ListGroup from './components/ListGroup';
 import Alert from './components/Alert';
+import Like from './components/Like';
 
 function App() {
   const heading="My Cities List Group"
@@ -25,9 +26,10 @@ function App() {
     <>
      
     <ListGroup items={items} heading={heading} onSelectItem={handleSelectItem}/>
-    <Alert>
+    <Alert btnClass="danger">
       Hello world form child <span>Thabang from Span</span>
     </Alert>
+    <Like onClick={()=> console.log("Clicked")}/>
     </>
   )
 }
