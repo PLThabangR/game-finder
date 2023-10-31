@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 import './App.css'
 //components 
-import Message from './message';
+
+import ListGroup from './components/ListGroup';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
      
-      <Message/>
+    <ListGroup/>
     </>
   )
 }
