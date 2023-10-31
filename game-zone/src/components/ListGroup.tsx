@@ -8,13 +8,15 @@ const ListGroup = () => {
     'Johannesburg',
     'Paris'
   ]
+
+  const item =[];
     return (
         <>
                 <h1>List</h1>
             <ul className="list-group">
-              
+              { item.length == 0 && <h1>No items found</h1>}
               {items.map((item) =>
-              <li className="list-group-item ">{item}</li>
+              <li className="list-group-item"key={item}>{item}</li>
               )}
           
 
