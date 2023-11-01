@@ -21,6 +21,16 @@ function App() {
   const handleSelectItem =(item:string)=>{
     console.log(item)
   }
+const [bugs,setBugs] = useState([
+  {id:1,tittle:"Bug 1",fixed:false},
+{id:2,tittle:"Bug 2",fixed:false}])
+  const handleMe =()=>{
+    //Create a new bug
+    setBugs(bugs.map(bug=>bug.id===1 ?{...bug,fixed:true} : bug));
+    for(let i=0; i<bugs.length; i++){
+      console.log(bugs);
+    }
+  }
   const text ="Hello world!"
   return (
     <>
@@ -30,6 +40,7 @@ function App() {
       Hello world form child <span>Thabang from Span</span>
     </Alert>
     <Like onClick={()=> console.log("Clicked")}/>
+    <button onClick={handleMe}>Click</button>
     </>
   )
 }
