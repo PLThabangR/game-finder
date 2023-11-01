@@ -6,8 +6,12 @@ import './App.css'
 import ListGroup from './components/ListGroup';
 import Alert from './components/Alert';
 import Like from './components/Like';
+import NavbarCart from './components/NavbarCart';
+import Cart from './components/Cart';
 
 function App() {
+  //Sharing state between components
+const [product,setProduct] = useState(["Product1","Product2","Product3","Product4"]);
   const heading="My Cities List Group"
   const items =[
     'New york',
@@ -41,6 +45,8 @@ const [bugs,setBugs] = useState([
     </Alert>
     <Like onClick={()=> console.log("Clicked")}/>
     <button onClick={handleMe}>Click</button>
+    <NavbarCart  cartItemsCount={product.length}/>
+    <Cart cartItem={product} onClear={()=>setProduct([])}/>
     </>
   )
 }
